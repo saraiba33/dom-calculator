@@ -1,16 +1,15 @@
-const operators = document.querySelectorAll(".operator")
-const plusButton = operators[4]
 const screen = document.querySelector("#screen")
+const allSpans = document.querySelectorAll("Span")
+const clearButton = document.querySelector("#clear")
 
-operators.forEach(operator => {
-    operator.addEventListener("click", (event) => {
+
+allSpans.forEach(span => {
+    span.addEventListener("click", (event) => {
         screen.textContent += event.target.innerText
     })
 })
 
-const clearButton = document.querySelector("#clear")
-clearButton.addEventListener("click", (event) => {
-        console.log(event)
+clearButton.addEventListener("click", () => {
         screen.textContent = ""
     })
     // clearButton.addEventListener('keydown', event => {
